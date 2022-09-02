@@ -3,11 +3,19 @@
 Input => { name: 'Holly', age: 35, role: 'producer'}
 Output => [['name', 'Holly'], ['age', 35], ['role', 'producer']]  */
 
-var obj = { name: 'Holly', age: 35, role: 'producer'}
 
-function convertObjectToList(obj) {
-  return Object.keys(obj).map(e => [e, obj[e]])
+function convertObjectToList(obj) {  
+  var array = [];
+   
+  for(var ele in obj){
+     var outputarray = [];
+    outputarray.push(ele);
+    outputarray.push(obj[ele]);
+    array.push(outputarray);
+  }
+  return array;
 }
 
-console.log(convertObjectToList(obj))
-// [ [ 'name', 'Holly' ], [ 'age', 35 ], [ 'role', 'producer' ] ]
+console.log(convertObjectToList(
+{ name: 'Holly', age: 35, role: 'producer'}))   
+
