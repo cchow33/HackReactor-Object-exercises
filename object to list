@@ -4,7 +4,9 @@ Input => { name: 'Holly', age: 35, role: 'producer'}
 Output => [['name', 'Holly'], ['age', 35], ['role', 'producer']]  */
 
 
-function convertObjectToList(obj) {     
+function convertObjectToList(obj) {   
+  var array = [];
+
   for(var ele in obj){
      var outputarray = [];
     outputarray.push(ele);
