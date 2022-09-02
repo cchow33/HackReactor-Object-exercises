@@ -1,0 +1,7 @@
+const obj = { key: [1000, 20, 50, 500] };
+
+const getElementsLessThan100AtProperty = (obj) => {
+  return obj.filter(item => item < 100);
+};
+
+console.log(getElementsLessThan100AtProperty(obj.key)); 
