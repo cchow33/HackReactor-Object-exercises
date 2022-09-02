@@ -1,0 +1,13 @@
+/* Write a function (without using 'Object.keys') called "getAllKeys" which returns an array of all the input object's keys. Example input:
+{ name : 'Sam', age : 25, hasPets : true } => ['name', 'age', 'hasPets'] */
+
+function getAllKeys(obj){
+  var array = [];
+  for (let prop in obj){
+    array.push(prop)
+  }
+    return array;
+}
+
+console.log(getAllKeys({ name : 'Sam', age : 25, hasPets : true }))
+// output  ['name', 'age', 'hasPets']
