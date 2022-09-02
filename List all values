@@ -1,0 +1,26 @@
+/* Write a function called "listAllValues" which returns an array of all the input object's values. 
+  Example 1:
+  input => { name : 'Krysten', age : 33, hasPets : false }
+  output => ['Krysten', 33, false]
+
+  Example 2:
+  input => { a : 'a', number : 11, hungry : true, grammyWins : 1}
+  output => ['a', 11, true, 1]   
+*/
+
+const obj = { a : 'a', number : 11, hungry : true, grammyWins : 1 };
+const array = [];
+
+function listAllValues(obj) {
+  const array = [];
+  for (const prop in obj){
+   if(obj.hasOwnProperty(prop)) {
+        var value = obj[prop];
+        array.push(value);
+    }
+}
+  return array;
+
+}
+console.log(listAllValues(obj))
+//  ['a', 11, true, 1]
