@@ -1,0 +1,14 @@
+// As function declaration:
+
+function getElementsLessThan100AtProperty() {
+  for(let i = 0; i < obj.key.length; i++){
+      // console.log(obj.key[i])
+      if(obj.key[i] < 100){
+        console.log(obj.key[i])
+      }
+    }
+}
+
+console.log(getElementsLessThan100AtProperty(obj.key)); 
+// 20 50  undefined
+
