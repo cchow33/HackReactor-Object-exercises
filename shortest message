@@ -1,0 +1,23 @@
+/* Write a function called "findShortestWordAmongMixedElements".
+Given an array, "findShortestWordAmongMixedElements" returns the shortest string within the given array.
+
+Notes:
+* If there are ties, it should return the first element to appear in the given array.
+* Expect the given array to have values other than strings.
+* If the given array is empty, it should return an empty string.
+* If the given array contains no strings, it should return an empty string. */
+
+let array = [4, 'two', 2, 'three']
+let strings = [];
+
+function findShortestWordAmongMixedElement(){
+  for (let i = 0; i < array.length; i++){
+    if (typeof array[i] === 'string'){
+      strings.push(array[i]);
+    }
+  }
+  console.log(strings)
+}
+
+
+findShortestWordAmongMixedElement()
